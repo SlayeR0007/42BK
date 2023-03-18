@@ -1,0 +1,35 @@
+gcc -Wall -Wextra -Werror ft_putchar.c main.c
+
+alias gccAc="gcc -Wall -Wextra -Werror" 
+
+Gcc -o hello hello.c.  //compile file ,create name as identify
+
+norminette -R  CheckForbiddenSourceHeaderflag
+
+
+
+vim ~/.vimrc
+
+set nocompatible
+
+filetype on
+filetype plugin on
+filetype indent on
+
+syntax on
+set number
+set shiftwidth=4
+set tabstop=4
+set nobackup
+set scrolloff=10
+set incsearch
+set ignorecase
+set showcmd
+set showmode
+set showmatch
+set nohlsearch
+
+set list
+set listchars=tab:-->,trail:~,extends:>,precedes:<,space:·
+
+noremap <space> :
