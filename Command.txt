@@ -2,7 +2,7 @@ gcc -Wall -Wextra -Werror ft_putchar.c main.c
 
 alias gccAc="gcc -Wall -Wextra -Werror" 
 
-Gcc -o hello hello.c.  //compile file ,create name as identify
+Gcc -o hello hello.c.  //specify output file
 
 norminette -R  CheckForbiddenSourceHeaderflag
 
