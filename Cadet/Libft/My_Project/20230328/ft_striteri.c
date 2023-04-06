@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: natharav <umm_mvp@hotmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/07 16:52:31 by ncolomer          #+#    #+#             */
-/*   Updated: 2023/04/06 22:49:01 by natharav         ###   ########.fr       */
+/*   Created: 2023/04/06 23:07:24 by natharav          #+#    #+#             */
+/*   Updated: 2023/04/06 23:20:05 by natharav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char
-	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char	*str;
-	size_t	i;
+	int	i;
 
-	if (!(str = ft_strdup(s)))
-		return (NULL);
 	i = 0;
-	while (str[i])
+	if (!s || !f)
+		return (NULL);
+	while (s[i])
 	{
-		str[i] = (*f)(i, str[i]);
+		(*f)(i, &s[i]);
 		i++;
 	}
-	return (str);
 }
