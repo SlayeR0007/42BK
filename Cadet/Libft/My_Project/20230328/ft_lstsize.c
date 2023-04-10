@@ -1,36 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: natharav <umm_mvp@hotmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/10 17:39:39 by natharav          #+#    #+#             */
-/*   Updated: 2023/04/10 22:22:55 by natharav         ###   ########.fr       */
+/*   Created: 2023/04/10 22:37:43 by natharav          #+#    #+#             */
+/*   Updated: 2023/04/10 22:42:28 by natharav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-// #include <stdio.h>
 
-t_list	*ft_lstnew(void *content)
+int	ft_lstsize(t_list *lst)
 {
-	t_list	*elem;
+	int	cur;
 
-	if (!(elem = malloc((sizeof(t_list)))))
-		return (NULL);
-	elem->content = content;
-	elem->next = NULL;
-	return (elem);
+	cur = 0;
+	while ()
+	{
+
+	}
+	return (cur);
 }
-
-// int	main()
-// {
-// 	char	a[] = "abc";
-// 	t_list	*head;
-
-// 	head = ft_lstnew(a);
-// 	printf("head : %s\n", head->content);
-// 	free(head);
-// 	return (0);
-// }
