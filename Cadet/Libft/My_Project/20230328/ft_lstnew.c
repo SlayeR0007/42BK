@@ -5,20 +5,32 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: natharav <umm_mvp@hotmail.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/10/09 20:05:17 by ncolomer          #+#    #+#             */
-/*   Updated: 2023/04/10 20:04:45 by natharav         ###   ########.fr       */
+/*   Created: 2023/04/10 17:39:39 by natharav          #+#    #+#             */
+/*   Updated: 2023/04/10 22:08:27 by natharav         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+// #include <stdio.h>
 
-t_list*ft_lstnew(void *content)
+t_list	*ft_lstnew(void *content)
 {
-	t_list	*elt;
+	t_list	*elem;
 
-	if (!(elt = (t_list*)malloc(sizeof(*elt))))
+	if (!(elem = malloc((sizeof(t_list)))))
 		return (NULL);
-	elt->content = content;
-	elt->next = NULL;
-	return (elt);
+	elem->content = content;
+	elem->next = NULL;
+	return (elem);
 }
+
+// int	main()
+// {
+// 	char	a[] = "abc";
+// 	t_list	*test;
+
+// 	test = ft_lstnew(a);
+// 	printf("test : %s\n", test->content);
+// 	free(test);
+// 	return (0);
+// }
