@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natharav <umm_mvp@hotmail.com>             +#+  +:+       +#+        */
+/*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/10 17:39:39 by natharav          #+#    #+#             */
-/*   Updated: 2023/04/10 22:22:55 by natharav         ###   ########.fr       */
+/*   Updated: 2023/04/22 16:36:10 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,8 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*elem;
 
-	if (!(elem = malloc((sizeof(t_list)))))
+	elem = malloc((sizeof(t_list)));
+	if (!elem)
 		return (NULL);
 	elem->content = content;
 	elem->next = NULL;

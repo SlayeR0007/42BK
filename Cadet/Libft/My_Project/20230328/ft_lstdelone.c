@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natharav <umm_mvp@hotmail.com>             +#+  +:+       +#+        */
+/*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 18:28:28 by natharav          #+#    #+#             */
-/*   Updated: 2023/04/11 18:37:59 by natharav         ###   ########.fr       */
+/*   Updated: 2023/04/22 16:32:38 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {

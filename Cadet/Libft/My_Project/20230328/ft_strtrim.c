@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natharav <umm_mvp@hotmail.com>             +#+  +:+       +#+        */
+/*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/02 20:05:39 by natharav          #+#    #+#             */
-/*   Updated: 2023/04/05 21:37:54 by natharav         ###   ########.fr       */
+/*   Updated: 2023/04/22 16:39:39 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,5 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		s1_len--;
 	}
-		return (ft_substr(s1, i, s1_len - i + 1));
+	return (ft_substr(s1, i, s1_len - i + 1));
 }
