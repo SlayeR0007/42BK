@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 15:10:01 by natharav          #+#    #+#             */
-/*   Updated: 2023/04/22 16:35:29 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/04/22 19:18:19 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	begin = NULL;
 	while (lst)
 	{
-		new = ft_lstnew((*f)(lst->content;))
-		if (!new)
+		new = ft_lstnew((*f)(lst->content));
+		if (! new)
 		{
 			ft_lstclear(&begin, del);
 			return (NULL);
