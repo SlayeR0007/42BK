@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natharav <umm_mvp@hotmail.com>             +#+  +:+       +#+        */
+/*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 13:59:53 by natharav          #+#    #+#             */
-/*   Updated: 2023/04/06 22:31:52 by natharav         ###   ########.fr       */
+/*   Updated: 2023/04/23 16:27:10 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,42 @@ int	num_digit(int n)
 	return (cur);
 }
 
+char	*ft_positive(char *ptr, int n)
+{
+	*ptr = '\0';
+	while (n != 0)
+	{
+		*(--ptr) = '0' + n % 10;
+		n = n / 10;
+	}
+	return (ptr);
+}
+
+char	*ft_negative(char *ptr, int n)
+{
+	*ptr = '\0';
+	while (n != 0)
+	{
+		*(--ptr) = '0' - n % 10;
+		n = n / 10;
+	}
+	*(--ptr) = '-';
+	return (ptr);
+}
+
+char	*ft_o(char *ptr, size_t n)
+{
+	char	*temp;
+
+	temp = ptr;
+	while (n--)
+	{
+		*ptr++ = '0';
+	}
+	*ptr = '\0';
+	return (temp);
+}
+
 char	*ft_itoa(int n)
 {
 	char	*result;
@@ -42,17 +78,12 @@ char	*ft_itoa(int n)
 	result = malloc(sizeof(char) * (len + 1));
 	if (!result)
 		return (NULL);
-	if (n == 0)
-		result[0] = '0';
-	else
+	if (n != 0)
 	{
-		while (len-- && nl != 0)
-		{
-			result[len] = (nl % 10) + '0';
-			nl = (nl - (nl % 10)) / 10;
-		}
+		if (n > 0)
+			return (ft_positive(&result[0] + len, n));
 		if (n < 0)
-			result[len] = '-';
+			return (ft_negative(&result[0] + len, n));
 	}
-	return (result);
+	return (ft_o(result, len));
 }

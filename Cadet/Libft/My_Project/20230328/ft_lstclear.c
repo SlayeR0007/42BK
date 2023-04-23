@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/11 18:40:53 by natharav          #+#    #+#             */
-/*   Updated: 2023/04/22 16:31:31 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/04/23 16:46:10 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	if (!del || !*lst || !lst)
 		return ;
-	if (*lst && lst)
+	while (*lst && lst)
 	{
 		tmp = (*lst)->next;
 		ft_lstdelone(*lst, del);
