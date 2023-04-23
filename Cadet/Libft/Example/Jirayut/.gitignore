@@ -1,0 +1,5 @@
+*.out
+.DS_Store
+libft.a
+s.dSYM/*
+.vscode/*
