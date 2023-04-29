@@ -5,8 +5,8 @@
 srcs/*.out
 srcs/a.out.dSYM
 srcs/main.dSYM
-.vscode.
-DS_Store
+.vscode
+.DS_Store
 /build/
 libft/*.o
 includes/.DS_Store
