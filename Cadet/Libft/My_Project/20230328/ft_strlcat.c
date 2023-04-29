@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: natharav <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/01 13:22:39 by natharav          #+#    #+#             */
-/*   Updated: 2023/04/01 13:22:41 by natharav         ###   ########.fr       */
+/*   Updated: 2023/04/29 17:34:27 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,9 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	src_len;
 	size_t	i;
 
-	dst_len = 0;
-	src_len = 0;
 	i = 0;
-	while (dst[dst_len])
-		dst_len++;
-	while (src[src_len])
-		src_len++;
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
 	if (dstsize - 1 > dst_len && dstsize > 0)
 	{
 		while (src[i] && dst_len + i < dstsize - 1)
