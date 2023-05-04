@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:50:16 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/03 19:37:50 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/04 21:24:11 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ int	conversion(va_list ptr, char c)
 	else if (c == CHA_P)
 		length = get_ptr(ptr);
 	else if (c == CHA_D)
-		length =
+		length = get_dec(ptr);
 	else if (c == CHA_I)
-		length =
+		length = get_int(ptr);
 	else if (c == CHA_U)
-		length =
+		length = get_unsigned_dec(ptr);
 	else if (c == CHA_X_LOWER)
 		length =
 	else if (c == CHA_X_UPPER)
@@ -91,5 +91,45 @@ int	get_str(va_list ptr)
 int	get_ptr(va_list ptr)
 {
 	size_t	length;
+	int		base;
+	void	*address;
+	char	*str;
 
+	length = 0;
+	base = 16;
+	address = NULL;
+	str = NULL;
+	address = va_arg(ptr, void *);
+	if (!address)
+		return (putstr_null_form_memory(str));
+	length = putstr_form_memory(str);
+	str = make_hex((unsigned long long)address, base, str);
+	length += ft_putstr(str);
+	if (str)
+		free(str);
+	return (length);
+}
+
+/*
+* @Desc: To get decimal in variadic argument by conversion and print it out
+*
+* @Params:
+* @Return: lenght = Lenght of printed out string
+*/
+int	get_dec(va_list ptr)
+{
+	size_t	length;
+	int		dec;
+	char	*str;
+
+	length = 0;
+	str = NULL;
+	dec = va_arg(ptr, int);
+	if (dec == 0)
+		return (putstr_null(str));
+	str = ft_itoa(dec);
+	length = ft_putstr(str);
+	if (str)
+		free(str);
+	return (length);
 }
