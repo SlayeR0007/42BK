@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:58:15 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/06 15:29:23 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/06 15:55:04 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@
 */
 char	*make_hex(unsigned long long nbr, int base, char *str)
 {
-	size_t	length;
+	size_t	len;
 
-	length = 0;
-	length = find_digit(nbr, base);
-	str = malloc(sizeof(char) * (length + 1));
+	len = 0;
+	len = find_digit(nbr, base);
+	str = ft_calloc(len + 1, sizeof(char));
 	if (!str)
 		return (NULL);
-	str = to_str_hex(nbr, str, length, base);
-	str[length] = '\0';
+	str[len] = '\0';
+	str = to_str_hex(nbr, str, len, base);
 	return (str);
 }
 
@@ -104,27 +104,6 @@ int	get_hex(va_list ptr, int is_lower)
 	if (str)
 		free(str);
 	return (length);
-}
-
-/*
-* @Desc: helper fuction of to make Hexadecimal to string by allcating of memory
-* @Params:	nbr = the number that converse to Hexadecimal
-*			base = base of the number
-*			*str = A string to allocate
-* @Return: String
-*/
-char	*make_hex(unsigned long long nbr, int base, char *str)
-{
-	size_t	len;
-
-	len = 0;
-	len = find_digit(nbr, base);
-	str = ft_calloc(len + 1, sizeof(char));
-	if (!str)
-		return (NULL);
-	str[len] = '\0';
-	str = to_str_hex(nbr, str, len, base);
-	return (str);
 }
 
 /*

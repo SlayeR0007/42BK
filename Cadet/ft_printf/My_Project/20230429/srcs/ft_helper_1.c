@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:30:12 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/06 15:29:27 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/06 15:58:20 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int	ft_putstr(char *str)
 *			base = Base of number (16)
 * @Return: lenght = Length of number
 */
-int	find_digit(unsigned long long nbr, int base)
+size_t	find_digit(unsigned long long nbr, int base)
 {
 	size_t	length;
 

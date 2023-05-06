@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 10:53:40 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/06 15:29:26 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/06 15:59:25 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,7 +105,7 @@ char	*ft_unsigned_tostr(unsigned int n)
 char	*ft_reverse_str(char *ptr, size_t len)
 {
 	char	*tmp;
-	int		i;
+	size_t		i;
 
 	i = 0;
 	tmp = ft_calloc(2, sizeof(char));

@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:58:00 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/03 19:03:01 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/06 15:52:48 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int	ft_printf(const char *data, ...)
 
 	str = ft_strdup(data);
 	va_start(ptr, data);
-	length = to_print(ptr, str);
+	length = to_print(ptr, (char *)str);
 	va_end(ptr);
 	if (str)
-		free (str);
+		free ((char *)str);
 	return (length);
 }
 

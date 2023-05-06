@@ -18,3 +18,4 @@ exampleVariadic/*.out
 exampleVariadic/*.dSYM
 /printfTester
 /ft_printf_tester
+pft/
