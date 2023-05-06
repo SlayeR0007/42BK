@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:30:12 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/04 21:24:10 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/06 15:29:27 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,24 @@ char	*to_str_hex(unsigned long long nbr, char *str, size_t length, int base)
 			str[length - 1] = mod + (97 - 10);
 		nbr /= base;
 		length--;
+	}
+	return (str);
+}
+
+/*
+* @Desc: To upper case the character of string
+* @Params: str = Lower case string
+* @Return: str = Upper case string
+*/
+char	*ft_str_to_upper(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i])
+	{
+		str[i] = ft_toupper(str[i]);
+		i++;
 	}
 	return (str);
 }

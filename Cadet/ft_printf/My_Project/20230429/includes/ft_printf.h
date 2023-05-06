@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 17:45:20 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/04 21:24:09 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/06 15:26:51 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,12 +45,12 @@ int		putstr_form_memory(char *str);
 int		putstr_null(char *str);
 int		to_print(va_list ptr, char *str);
 int		get_unsigned_dec(va_list ptr);
-//int		get_hex(va_list ptr, int is_lower);
-//int		get_percent(void);
+int		get_hex(va_list ptr, int is_lower);
+int		get_percent(void);
 char	*make_hex(unsigned long long nbr, int base, char *str);
 char	*to_str_hex(unsigned long long nbr, char *str, size_t lenght, int base);
 char	*ft_unsigned_tostr(unsigned int n);
 char	*ft_reverse_str(char *ptr, size_t len);
-//char	*ft_str_to_upper(char *str);
+char	*ft_str_to_upper(char *str);
 size_t	find_digit(unsigned long long nbr, int base);
 #endif

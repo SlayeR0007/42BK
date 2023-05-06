@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/04 16:50:15 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/04 16:54:22 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/04 21:28:55 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	main(void)
 {
-	char *str;
+	char	*str;
 
 	str = "abc";
 	printf("address of string : %s is %p\n", str, str);

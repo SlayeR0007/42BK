@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 18:50:16 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/04 21:24:11 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/06 15:29:25 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@ int	conversion(va_list ptr, char c)
 	else if (c == CHA_U)
 		length = get_unsigned_dec(ptr);
 	else if (c == CHA_X_LOWER)
-		length =
+		length = get_hex(ptr, 1);
 	else if (c == CHA_X_UPPER)
-		length =
+		length = get_hex(ptr, 0);
 	else if (c == CHA_PERCENT)
-		length =
+		length = get_percent();
 	return (length);
 }
 
