@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:09:21 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/21 17:14:35 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/21 17:18:08 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char	*read_file_line(int fd, char *str)
 	byte = BYTE;
 	if (!str)
 		str = ft_calloc(1, 1);
-	buff = ft_callloc(BUFFER_SIZE + 1, sizeof(char));
+	buff = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
 	if (!buff)
 		return (NULL);
 	while (byte > 0)
@@ -79,7 +79,7 @@ char	*read_file_line(int fd, char *str)
 			free(buff);
 			return (NULL);
 		}
-		buff[byte] = NULL;
+		buff[byte] = 0;
 		str = append_to_str(str, buff);
 		if (!str || is_newline(buff))
 			break;

@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 18:38:14 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/20 19:33:04 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/21 17:18:11 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ int	ft_strlen(const char *s, char c)
  * 			NULL, when it cannot allocate memory.
  *
 */
-char	append_to_str(char *str, char *buff)
+char	*append_to_str(char *str, char *buff)
 {
 	int		len_total;
 	int		i;
@@ -87,7 +87,7 @@ char	append_to_str(char *str, char *buff)
 		return (NULL);
 	i = 0;
 	j = 0;
-	len_total = ft_strlen(len, NULL) + ft_strlen(buff, NULL);
+	len_total = ft_strlen(str, 0) + ft_strlen(buff, 0);
 	str_new = ft_calloc(len_total + 1, sizeof(char));
 	if (!str_new)
 		return (NULL);
