@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:09:21 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/21 17:18:08 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/21 17:33:03 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,7 +82,7 @@ char	*read_file_line(int fd, char *str)
 		buff[byte] = 0;
 		str = append_to_str(str, buff);
 		if (!str || is_newline(buff))
-			break;
+			break ;
 	}
 	free(buff);
 	return (str);

@@ -1,0 +1,2 @@
+../get_next_line.c: Error!
+Error: SPACE_AFTER_KW       (line:  85, col:  13):	Missing space after keyword
