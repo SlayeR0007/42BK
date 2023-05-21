@@ -6,7 +6,7 @@
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 17:09:21 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/20 19:33:02 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/21 17:14:35 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,9 @@ char	*get_next_line(int fd)
 	str = read_file_line(fd, str);
 	if (!str)
 		return (NULL);
-	line =
+	line = get_one_line(str);
+	str = delete_one_line(str);
+	return (line);
 }
 
 /**
@@ -84,4 +86,76 @@ char	*read_file_line(int fd, char *str)
 	}
 	free(buff);
 	return (str);
+}
+
+/**
+ *  @overview: Pull content just in one line from a static string to
+ * 				allocated memory.
+ *
+ *	@params: str is string (static string)
+ *
+ * 	@return: NULL, when string is '\0'
+ * 			NULL, when it cannot allocate memmory.
+ *
+ *
+*/
+char	*get_one_line(char *str)
+{
+	char	*line;
+	int		len_line;
+	int		i;
+
+	i = 0;
+	if (!str[i])
+		return (NULL);
+	len_line = ft_strlen(str, '\n');
+	line = ft_calloc(len_line + 2, sizeof(char));
+	if (!line)
+		return (NULL);
+	while (str[i] && str[i] != '\n')
+	{
+		line[i] = str[i];
+		i++;
+	}
+	if (str[i] && str[i] == '\n' )
+		line[i] = '\n';
+	return (line);
+}
+
+/**
+ *  @overview: Handle the static string that will keep only
+ * 			the remaining content.
+ *
+ *	@params: str is string
+ *
+ * 	@return: New string with allocated memory that removes the content line
+ * 				that is pulled in the get_one_line function.
+ * 			NULL, when after skipping the content line, nothing remains.
+ * 			NULL, when it cannot allocate memory.
+ *
+*/
+char	*delete_one_line(char *str)
+{
+	int		i;
+	int		len_oneline;
+	char	*new_str;
+
+	i = 0;
+	len_oneline = ft_strlen(str, '\n');
+	if (!str[len_oneline])
+	{
+		free(str);
+		return (NULL);
+	}
+	new_str = ft_calloc(ft_strlen(str, 0) - len_oneline + 1, sizeof(char));
+	if (!new_str)
+		return (NULL);
+	len_oneline++;
+	while (str[len_oneline + i])
+	{
+		new_str[i] = str[len_oneline + i];
+		i++;
+	}
+	free(str);
+	return (new_str);
 }

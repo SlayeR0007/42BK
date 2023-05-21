@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_lint.h                                    :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: <natharav> <Umm_MVP@hotmail.com>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/20 18:03:55 by <natharav>        #+#    #+#             */
-/*   Updated: 2023/05/20 19:32:59 by <natharav>       ###   ########.fr       */
+/*   Updated: 2023/05/21 17:12:36 by <natharav>       ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@
 
 char	*get_next_line(int fd);
 char	*read_file_line(int fd, char *str);
-//char	*get_one_line(char *str);
-//char	*delete_one_line(char *str);
+char	*get_one_line(char *str);
+char	*delete_one_line(char *str);
 char	*append_to_str(char *str, char *buff);
 int		ft_strlen(const char *s, char c);
 int		is_newline(char *str);
